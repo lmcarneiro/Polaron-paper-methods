@@ -10,7 +10,6 @@ import customplots as cp
 import os
 import matplotlib.ticker as mticker
 
-
 def decomposition(TA_file, init_time, fin_time, wav, semilog=False, n=None):
     """First decompose into initial and final state. The fit will be to these
     two states."""
@@ -77,7 +76,7 @@ def rate(t, y, dt, elph_tau, pol_tau, delay, start):
 
 def twoStateModel(params, show_params, wav, data=None, plot=False):
     """Two state model used for fitting transient absorption data.
-    Used by the Fit() function. Can plot measured data to compare w/ solution.
+    Can plot measured data to compare w/ solution.
     Can also check how fit is going with show_params."""
 
     parvals = params.valuesdict()
@@ -188,7 +187,6 @@ def fitTwoState(elph_tau, pol_tau, amp_ct, amp_p, delay, dt, start, end, step,
     provided. Data should be a numpy array, it is then interpolated to 1000
     points to improve fit. Can show fit params while it runs.
     Plots fit results when done."""
-
 
     measured, times = decomposition(TA_file, init_time, fin_time, wav, semilog, n)
     tspan = np.linspace(start, end, step)
