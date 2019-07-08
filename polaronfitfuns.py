@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import lmfit
 import statsmodels.api as sm
-from myDeltaA_v11 import plotTA
+from TAanalysis import plotTA
 import customplots as cp
 import os
 import matplotlib.ticker as mticker
